@@ -1,0 +1,25 @@
+.container{
+    display: block;
+    padding: 10px 50px;
+    position: relative;
+    .link{
+        font-size: 1em;
+        color: #e5e5e5;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        min-width: 6em;
+        display: inline-flex;
+        align-items: center;
+        .title{
+            margin-right: 12px;
+        }
+        .explore{
+            position: relative;
+            font-size: 0.68em;
+            .icon{
+                font-size: 0.68em;
+            }
+        }
+    }
+}

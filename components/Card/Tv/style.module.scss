@@ -1,0 +1,153 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixin.scss';
+
+.container{
+    position: relative;
+    // min-height: 600px;
+}
+
+.card{
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    // width: 300px;
+    .wrapper-img{
+        .img{
+            width: 100%;
+        }
+    }
+}
+
+.hovered-card{
+    // min-width: 320px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 4;
+    width: 122%;
+    .wrapper-img{
+        position: relative;
+        .img{
+            width: 100%;
+        }
+        .title{
+            line-height: 1;
+            text-shadow: 2px 2px 4px rgb(20 20 20 / 45%);
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            width: 70%;
+            z-index: 9;
+        }
+    }
+    .details{
+        background: $black;
+        padding: 8px 14px;
+
+        .icons{
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            .icon{
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                border: 1px solid #fff;
+                padding: 9px;
+                margin-right: 9px;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+            }
+            .details-icon{
+                @extend .icon;
+                margin-right: 0;
+            }
+            .left{
+                display: flex;
+            }
+            .right{
+                display: flex;
+            }
+        }
+
+        .meta-data{
+            display: flex;
+            margin-top: 20px;
+
+            .match-score{
+                white-space: unset;
+                color: #46d369;
+                font-weight: 700;
+                margin-right: 10px;
+                font-size: 0.85em;
+                @include min-width(xxl){
+                    font-size: 0.95em;
+                }
+            }
+            .maturity-rate{
+                color: #fff;
+                margin-right: 10px;
+                border: 1px solid white;
+                padding: 1px 2px;
+                font-size: 0.8em;
+            }
+            .season-total{
+                color: #fff;
+                margin-right: 10px;
+                font-size: 0.85em;
+                @include min-width(xxl){
+                    font-size: 0.95em;
+                }
+            }
+            .quality-video{
+                color: #fff;
+                border: 1px solid white;
+                padding: 1px 2px;
+                font-size: 0.8em;
+            }
+        }
+
+        .genres{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            padding: 0.9em;
+            li{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                &::before{
+                    content: "\2022";
+                    color: grey;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1em;
+                }
+            }
+            .genre{
+                margin-right: 24px;
+                color: #fff;
+                padding: 1px 2px;
+                text-transform: capitalize;
+                font-size: 0.85em;
+                @include min-width(xxl){
+                    font-size: 0.95em;
+                }
+            }
+        }
+    }
+}

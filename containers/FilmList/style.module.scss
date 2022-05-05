@@ -1,0 +1,48 @@
+.container{
+    display: block;
+    padding: 18px 0;
+    position: relative;
+}
+
+.slider{
+    position: relative;
+}
+
+.swiper{
+    z-index: unset;
+    padding: 0 55px;
+    overflow: unset;
+    .swiper-slide{
+        // z-index: 1;
+        // padding: 0 12px;
+        :hover{
+            z-index: 7 !important;
+        }
+    }
+    :hover{
+        z-index: 5 !important;
+    }
+}
+.prev-next{
+    cursor: pointer;
+    color: #fff;
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    min-width: 75px;
+}
+.next{
+    @extend .prev-next;
+    right: 0;
+    justify-content: flex-end;
+}
+
+.prev{
+    @extend .prev-next;
+    left: 0;
+    justify-content: flex-start;
+}
