@@ -4,14 +4,14 @@ import { MdInfoOutline } from 'react-icons/md';
 import { useQuery } from 'react-query';
 import Image from 'next/image';
 import useViewport from '~/hooks/useViewport';
+import { getPopularMovies } from '~/services/movie';
+import { MovieResult, PopularMovieResult } from '~/services/movie/types';
+import useRandomNumber from '~/hooks/useRandomNumber';
+import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '~/config/urls';
+import limitText from '~/utils/limitText';
+import BannerSkeleton from '~/components/Skeletons/Banner';
+import ModalCard from '~/containers/ModalMovieCard';
 import style from './style.module.scss';
-import { getPopularMovies } from '../../services/movie';
-import ModalCard from '../ModalMovieCard';
-import { MovieResult, PopularMovieResult } from '../../services/movie/types';
-import useRandomNumber from '../../hooks/useRandomNumber';
-import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '../../config/urls';
-import limitText from '../../utils/limitText';
-import BannerSkeleton from '../../components/Skeletons/Banner';
 
 const Banner: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);

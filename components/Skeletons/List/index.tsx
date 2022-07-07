@@ -1,5 +1,5 @@
 import React from 'react';
-import CardSkeleton from '../Card';
+import CardSkeleton from '~/components/Skeletons/Card';
 import style from './style.module.scss';
 
 interface ListSkeletonProps {

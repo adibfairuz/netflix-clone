@@ -6,10 +6,10 @@ import {
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import useViewport from '~/hooks/useViewport';
-import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '../../../config/urls';
-import convertGenres from '../../../utils/convertGenres';
+import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '~/config/urls';
+import convertGenres from '~/utils/convertGenres';
+import { TvResult } from '~/services/tv/types';
 import style from './style.module.scss';
-import { TvResult } from '../../../services/tv/types';
 
 interface CardProps {
     data: TvResult,

@@ -5,11 +5,10 @@ import {
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import useViewport from '~/hooks/useViewport';
+import { MovieResult } from '~/services/movie/types';
+import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '~/config/urls';
+import convertGenres from '~/utils/convertGenres';
 import style from './style.module.scss';
-
-import { MovieResult } from '../../../services/movie/types';
-import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '../../../config/urls';
-import convertGenres from '../../../utils/convertGenres';
 
 interface CardProps {
     data: MovieResult,

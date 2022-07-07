@@ -5,8 +5,8 @@ import SearchBar from '~/components/SearchBar';
 import { FaBell } from 'react-icons/fa';
 import useViewport from '~/hooks/useViewport';
 import { FiMenu } from 'react-icons/fi';
+import NetflixLogo from '~/assets/images/netflix-logo.png';
 import style from './style.module.scss';
-import NetflixLogo from '../../assets/images/netflix-logo.png';
 
 const Header: React.FC = () => {
     const [isOnTop, setIsOnTop] = useState(true);

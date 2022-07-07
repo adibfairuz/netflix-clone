@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { FaPlay, FaPlus, FaRegThumbsUp } from 'react-icons/fa';
 import { useQuery } from 'react-query';
 import Image from 'next/image';
+import { MovieResult } from '~/services/movie/types';
+import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '~/config/urls';
+import convertGenres from '~/utils/convertGenres';
+import Modal from '~/components/Modal';
+import { getMovieCredits } from '~/services/movie';
 import style from './style.module.scss';
-import { MovieResult } from '../../services/movie/types';
-import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '../../config/urls';
-import convertGenres from '../../utils/convertGenres';
-import Modal from '../../components/Modal';
-import { getMovieCredits } from '../../services/movie';
 
 interface ModalMovieCardProps {
     data: MovieResult,

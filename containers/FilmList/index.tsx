@@ -8,14 +8,14 @@ import SwiperCore, { Navigation } from 'swiper';
 import { motion } from 'framer-motion';
 import { useQuery } from 'react-query';
 import useViewport from '~/hooks/useViewport';
-import MoviesTitle from '../../components/MoviesTitle';
+import MoviesTitle from '~/components/MoviesTitle';
+import { MovieCard, TvCard } from '~/components/Card';
+import { MovieQueryFunction, MovieResult } from '~/services/movie/types';
+import ListSkeleton from '~/components/Skeletons/List';
+import { TvQueryFunction, TvResult } from '~/services/tv/types';
+import ModalMovieCard from '~/containers/ModalMovieCard';
+import ModalTvCard from '~/containers/ModalTvCard';
 import style from './style.module.scss';
-import { MovieCard, TvCard } from '../../components/Card';
-import { MovieQueryFunction, MovieResult } from '../../services/movie/types';
-import ListSkeleton from '../../components/Skeletons/List';
-import ModalMovieCard from '../ModalMovieCard';
-import { TvQueryFunction, TvResult } from '../../services/tv/types';
-import ModalTvCard from '../ModalTvCard';
 
 SwiperCore.use([Navigation]);
 

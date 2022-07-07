@@ -1,10 +1,10 @@
 import { NextPage } from 'next';
-import Footer from '../containers/Footer';
-import Banner from '../containers/Banner';
-import FilmList from '../containers/FilmList';
-import Header from '../containers/Header';
-import { getPopularMovies, getTopRatedMovies, getUpcomingMovies } from '../services/movie';
-import { getTopRatedTvs, getPopularTvs } from '../services/tv';
+import Footer from '~/containers/Footer';
+import Banner from '~/containers/Banner';
+import FilmList from '~/containers/FilmList';
+import Header from '~/containers/Header';
+import { getPopularMovies, getTopRatedMovies, getUpcomingMovies } from '~/services/movie';
+import { getTopRatedTvs, getPopularTvs } from '~/services/tv';
 
 const Home: NextPage = () => {
     return (

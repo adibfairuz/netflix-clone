@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { FaPlay, FaPlus, FaRegThumbsUp } from 'react-icons/fa';
 import { useQuery } from 'react-query';
 import Image from 'next/image';
+import { TvResult } from '~/services/tv/types';
+import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '~/config/urls';
+import convertGenres from '~/utils/convertGenres';
+import Modal from '~/components/Modal';
+import { getTvCredits } from '~/services/tv';
 import style from './style.module.scss';
-import { TvResult } from '../../services/tv/types';
-import { BASE_IMG_URL, PLACEHOLDER_IMG_URL } from '../../config/urls';
-import convertGenres from '../../utils/convertGenres';
-import Modal from '../../components/Modal';
-import { getTvCredits } from '../../services/tv';
 
 interface ModalTvCardProps {
     data: TvResult,
