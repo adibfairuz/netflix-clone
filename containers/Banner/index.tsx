@@ -64,7 +64,6 @@ const Banner: React.FC = () => {
                             <FaPlay
                                 className={style.icon}
                             />
-                            {' '}
                             Play
                         </button>
                         <button

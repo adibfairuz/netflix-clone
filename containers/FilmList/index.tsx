@@ -97,6 +97,21 @@ const FilmList: React.FC<MovieListProps | TvListProps> = ({
         },
     };
 
+    const totalSkeleton = () => {
+        if (sizes.xxl) {
+            return 6;
+        } if (sizes.xl) {
+            return 5;
+        } if (sizes.lg) {
+            return 4;
+        } if (sizes.md) {
+            return 3;
+        } if (sizes.sm) {
+            return 2;
+        }
+        return 1;
+    };
+
     const onMouseOver = () => {
         setNavigationsAreActive(true);
     };
@@ -119,15 +134,7 @@ const FilmList: React.FC<MovieListProps | TvListProps> = ({
             <MoviesTitle>{title}</MoviesTitle>
             {
                 isLoadingMovie ? (
-                    <ListSkeleton total={
-                        sizes.xxl ? 6
-                            : sizes.xl ? 5
-                                : sizes.lg ? 4
-                                    : sizes.md ? 3
-                                        : sizes.sm ? 2
-                                            : 1
-                    }
-                    />
+                    <ListSkeleton total={totalSkeleton()} />
                 )
                     : (
                         <div
