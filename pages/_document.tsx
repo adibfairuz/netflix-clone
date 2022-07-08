@@ -7,7 +7,6 @@ const Document = () => {
         <Html>
             <Head>
                 <link rel="shortcut icon" href="/favicon.ico" />
-                <title>Netflix Clone</title>
             </Head>
             <body>
                 <Main />

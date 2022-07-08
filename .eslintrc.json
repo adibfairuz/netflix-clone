@@ -6,7 +6,8 @@
     "extends": [
         "plugin:react/recommended",
         "airbnb",
-        "airbnb-typescript"
+        "airbnb-typescript",
+        "plugin:@next/next/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -72,6 +73,7 @@
         "linebreak-style": "off",
         "max-len": ["error", { "code": 125 }],
         "react/prop-types": "off",
-        "no-plusplus": "off"
+        "no-plusplus": "off",
+        "jsx-a11y/anchor-is-valid": "off"
     }
 }

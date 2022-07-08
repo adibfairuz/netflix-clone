@@ -5,10 +5,14 @@ import FilmList from '~/containers/FilmList';
 import Header from '~/containers/Header';
 import { getPopularMovies, getTopRatedMovies, getUpcomingMovies } from '~/services/movie';
 import { getTopRatedTvs, getPopularTvs } from '~/services/tv';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
     return (
         <div>
+            <Head>
+                <title>Netflix Clone</title>
+            </Head>
             <Header />
             <Banner />
             <div style={{ zIndex: 40, position: 'relative' }}>

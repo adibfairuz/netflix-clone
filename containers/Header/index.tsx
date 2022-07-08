@@ -42,7 +42,7 @@ const Header: React.FC = () => {
                             )
                         }
                         <Link href="/#">
-                            <a href="/#" className={style.logo}>
+                            <a className={style.logo}>
                                 <Image width={92} height={31} src={NetflixLogo} />
                             </a>
                         </Link>
@@ -50,19 +50,19 @@ const Header: React.FC = () => {
                             devices.desktop && (
                                 <>
                                     <Link href="/#">
-                                        <a href="/#" className={style.menu}>Home</a>
+                                        <a className={style.menu}>Home</a>
                                     </Link>
                                     <Link href="/#">
-                                        <a href="/#" className={style.menu}>TV Shows</a>
+                                        <a className={style.menu}>TV Shows</a>
                                     </Link>
                                     <Link href="/#">
-                                        <a href="/#" className={style.menu}>Movies</a>
+                                        <a className={style.menu}>Movies</a>
                                     </Link>
                                     <Link href="/#">
-                                        <a href="/#" className={style.menu}>New & Popular</a>
+                                        <a className={style.menu}>New & Popular</a>
                                     </Link>
                                     <Link href="/#">
-                                        <a href="/#" className={style.menu}>My List</a>
+                                        <a className={style.menu}>My List</a>
                                     </Link>
                                 </>
                             )
